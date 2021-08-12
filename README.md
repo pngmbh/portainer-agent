@@ -1,5 +1,12 @@
 # Portainer agent
 
+Our fork, based on the upstream `develop` branch.
+Changes to upstream:
+
+* higher read timeout in http/server.go
+
+------
+
 ## Purpose
 
 The Portainer Agent is a workaround for a Docker API limitation when using the Docker API to manage a Docker environment. The user interactions with specific resources (containers, networks, volumes and images) are limited to those available on the node targeted by the Docker API request.
