@@ -2,6 +2,7 @@ IMG=r.planetary-quantum.com/quantum-public/portainer-agent
 
 .PHONY: build
 build: dist
+	./setup.sh
 	GOOS="linux" GOARCH="amd64" CGO_ENABLED=0 go build --installsuffix cgo --ldflags '-s' "cmd/agent/main.go"
 	mv main dist/agent
 	docker build -t "$(IMG):latest" -f build/linux/Dockerfile .
